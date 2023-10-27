@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\TimelineEvent;
+use App\Models\Category;
 
-class Category extends Model
+class TimelineEvent extends Model
 {
     use HasFactory;
 
-    public function timelineEvents() {
-        return $this->hasMany(TimelineEvent::class);
+    public function category() {
+        return $this->belongsTo(Category::class);
     }
 }

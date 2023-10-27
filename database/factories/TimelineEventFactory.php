@@ -3,11 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Category;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\TimelineEvent>
  */
-class CategoryFactory extends Factory
+class TimelineEventFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,11 +18,10 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         $name = $this->faker->name();
-        $color = $this->faker->hexColor();
 
         return [
+            'category_id' => Category::factory(),
             'name' => $name,
-            'color' => $color,
         ];
     }
 }
