@@ -13,15 +13,7 @@ class TimelineEventController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        return TimelineEvent::all();
     }
 
     /**
@@ -29,7 +21,7 @@ class TimelineEventController extends Controller
      */
     public function store(StoreTimelineEventRequest $request)
     {
-        //
+        return TimelineEvent::create($request->all());
     }
 
     /**
@@ -37,15 +29,7 @@ class TimelineEventController extends Controller
      */
     public function show(TimelineEvent $timelineEvent)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(TimelineEvent $timelineEvent)
-    {
-        //
+        return $timelineEvent;
     }
 
     /**

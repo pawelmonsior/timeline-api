@@ -10,6 +10,11 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'color',
+    ];
+
     public function timelineEvents() {
         return $this->hasMany(TimelineEvent::class);
     }
