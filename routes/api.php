@@ -23,6 +23,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Api'], function() {
     Route::apiResource('categories', CategoryController::class);
     Route::apiResource('events', TimelineEventController::class);
     Route::post('register', [UserController::class, 'register']);
+    Route::post('login', [UserController::class, 'login']);
 });
 
 Route::group(['middleware' => ['auth:sanctum']], function() {    
