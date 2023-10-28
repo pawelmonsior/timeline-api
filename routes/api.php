@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['namespace' => 'App\Http\Controllers\Api'], function() {
     Route::apiResource('categories', CategoryController::class);
     Route::apiResource('events', TimelineEventController::class);
+    Route::apiResource('users', UserController::class);
 });
