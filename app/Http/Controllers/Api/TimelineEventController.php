@@ -43,8 +43,9 @@ class TimelineEventController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(TimelineEvent $timelineEvent)
+    public function destroy($timelineEventId)
     {
-        //
+        $user = TimelineEvent::find($timelineEventId);
+        $user->forceDelete();
     }
 }
