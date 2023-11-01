@@ -21,13 +21,15 @@ class TimelineEventFactory extends Factory
         $description = $this->faker->text();
         $start_date = $this->faker->dateTime();
         $end_date = $this->faker->dateTime();
+        $image = $this->faker->imageUrl(360, 360, 'animals', true, 'dogs', true);
 
         return [
             'category_id' => Category::factory(),
             'name' => $name,
             'description' => $description,
             'start_date' => $start_date,
-            'end_date' => $end_date
+            'end_date' => $end_date,
+            'image' => $image,
         ];
     }
 }
