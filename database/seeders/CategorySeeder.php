@@ -14,8 +14,8 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::factory()
-            ->count(5)
-            ->hasTimelineEvents(10)
+            ->count(4)
+            ->hasTimelineEvents(3)
             ->create();
     }
 }

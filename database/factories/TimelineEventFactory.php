@@ -17,11 +17,17 @@ class TimelineEventFactory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->name();
+        $name = $this->faker->word();
+        $description = $this->faker->text();
+        $start_date = $this->faker->dateTime();
+        $end_date = $this->faker->dateTime();
 
         return [
             'category_id' => Category::factory(),
             'name' => $name,
+            'description' => $description,
+            'start_date' => $start_date,
+            'end_date' => $end_date
         ];
     }
 }

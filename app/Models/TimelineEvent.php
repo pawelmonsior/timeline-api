@@ -13,6 +13,9 @@ class TimelineEvent extends Model
     protected $fillable = [
         'name',
         'category_id',
+        'description',
+        'start_date',
+        'end_date'
     ];
 
     public function category() {
