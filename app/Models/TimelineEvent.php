@@ -15,7 +15,8 @@ class TimelineEvent extends Model
         'category_id',
         'description',
         'start_date',
-        'end_date'
+        'end_date',
+        'image'
     ];
 
     public function category() {
