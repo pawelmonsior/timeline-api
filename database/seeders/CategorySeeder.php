@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Category;
+use App\Models\User;
 
 class CategorySeeder extends Seeder
 {
@@ -16,6 +17,10 @@ class CategorySeeder extends Seeder
         Category::factory()
             ->count(4)
             ->hasTimelineEvents(3)
+            ->create();
+
+        User::factory()
+            ->count(1)
             ->create();
     }
 }

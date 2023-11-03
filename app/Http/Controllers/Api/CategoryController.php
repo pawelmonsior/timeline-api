@@ -53,14 +53,15 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        //
+        $category->update($request->all());
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy($categoryId)
     {
-        //
+        $category = Category::find($categoryId);
+        $category->forceDelete();
     }
 }

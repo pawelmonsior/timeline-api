@@ -37,7 +37,7 @@ class TimelineEventController extends Controller
      */
     public function update(UpdateTimelineEventRequest $request, TimelineEvent $timelineEvent)
     {
-        //
+        $timelineEvent->update($request->all());
     }
 
     /**
@@ -45,7 +45,7 @@ class TimelineEventController extends Controller
      */
     public function destroy($timelineEventId)
     {
-        $user = TimelineEvent::find($timelineEventId);
-        $user->forceDelete();
+        $event= TimelineEvent::find($timelineEventId);
+        $event->forceDelete();
     }
 }
